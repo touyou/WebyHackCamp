@@ -1,0 +1,6 @@
+framework module Pods_WebyHackCamp {
+  umbrella header "Pods-WebyHackCamp-umbrella.h"
+
+  export *
+  module * { export * }
+}

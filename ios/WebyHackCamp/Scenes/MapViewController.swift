@@ -8,9 +8,10 @@
 
 import UIKit
 import MapKit
-import SwiftLocation
+//import SwiftLocation
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 // MARK: - MapViewController
 
@@ -26,19 +27,31 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         setupBind()
-        let session = URLSession(configuration: .default)
-        session.rx.data(request: URLRequest(url: URL(string: "")!)).subscribe { event in
 
-            switch event {
-            case .next(let data):
-                let decoder = JSONDecoder()
-                self.items = try! decoder.decode([Item].self, from: data)
-            case .completed:
-                print("completed")
-            case .error(let error):
-                print(error)
-            }
-            }.disposed(by: disposeBag)
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+
+            locationManager.startUpdatingLocation()
+        }
+
+        let session = URLSession(configuration: .default)
+//        var request = URLRequest(url: URL(string: "")!)
+//        request.httpMethod = "GET"
+//        session.rx.data(request: URLRequest(url: URL(string: "")!)).subscribe { event in
+//
+//            switch event {
+//            case .next(let data):
+//                let decoder = JSONDecoder()
+//                self.items = try! decoder.decode([Item].self, from: data)
+//            case .completed:
+//                print("completed")
+//            case .error(let error):
+//                print(error)
+//            }
+//            }.disposed(by: disposeBag)
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -53,12 +66,14 @@ class MapViewController: UIViewController {
 
         didSet {
 
-            mapView.setCenter(mapView.userLocation.coordinate, animated: true)
+            mapView.delegate = self
             mapView.userTrackingMode = .follow
+            mapView.showsUserLocation = true
         }
     }
     @IBOutlet private weak var menuButton: UIButton!
     private var disposeBag = DisposeBag()
+    private var locationManager: CLLocationManager!
     private var items: [Item] = []
     private var annotations: [ImagePointAnnotation] = []
 
@@ -92,6 +107,21 @@ extension MapViewController: MKMapViewDelegate {
         }
         annotationView.annotation = annotation
         return annotationView
+    }
+}
+
+// MARK: - Location Manager
+
+extension MapViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+
+        switch status {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        default:
+            break
+        }
     }
 }
 

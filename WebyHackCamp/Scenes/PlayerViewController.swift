@@ -9,10 +9,32 @@
 import UIKit
 import SwiftOSC
 
+// MARK: - PlayerViewController
+
 class PlayerViewController: UIViewController {
+
+    // MARK: Internal
+
+
+    // MARK: UIViewController
+
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        if let location = event?.touches(for: audioPad)?.first?.location(in: audioPad) {
+
+            print("x: \(location.x), y: \(location.y)")
+        }
+    }
+
+    // MARK: Private
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var visualPad: UIView! {
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var visualPad: UIView! {
 
         didSet {
 
@@ -31,7 +53,7 @@ class PlayerViewController: UIViewController {
             visualPad.addGestureRecognizer(topRecognizer)
         }
     }
-    @IBOutlet weak var audioPad: UIView! {
+    @IBOutlet private weak var audioPad: UIView! {
 
         didSet {
 
@@ -43,36 +65,22 @@ class PlayerViewController: UIViewController {
 
     private var client = OSCClient(address: "192.168.100.37", port: 10000)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @objc func leftSwipeVisualPad(_ sender: Any) {
+    @objc private func leftSwipeVisualPad(_ sender: Any) {
 
         // 色変える
     }
 
-    @objc func rightSwipeVisualPad(_ sender: Any) {
+    @objc private func rightSwipeVisualPad(_ sender: Any) {
 
         // 色変える
     }
 
-    @objc func topSwipeVisualPad(_ sender: Any) {
+    @objc private func topSwipeVisualPad(_ sender: Any) {
 
 //        let num = Double(Int(arc4random_uniform(20)) - 10) / 10.0
 //        var message = OSCMessage(OSCAddressPattern("/accxyz"), num, num, num)
 //        client.send(message)
         print("send visual")
-    }
-
-    // MARK: - touch location
-
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        if let location = event?.touches(for: audioPad)?.first?.location(in: audioPad) {
-
-            print("x: \(location.x), y: \(location.y)")
-        }
     }
 }
 

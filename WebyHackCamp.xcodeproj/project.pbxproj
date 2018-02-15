@@ -24,6 +24,14 @@
 		468F52E820354E8700BC0773 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52E020354E8700BC0773 /* UIColor+Extensions.swift */; };
 		468F52EC2035509000BC0773 /* FuturaDisOutP.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468F52EB2035509000BC0773 /* FuturaDisOutP.ttf */; };
 		468F52EF203561EF00BC0773 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52EE203561EF00BC0773 /* Items.swift */; };
+		468F52F22035644D00BC0773 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52F12035644D00BC0773 /* MapViewController.swift */; };
+		468F52F42035645900BC0773 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468F52F32035645900BC0773 /* MapViewController.storyboard */; };
+		468F52F72035657900BC0773 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468F52F52035657900BC0773 /* RxSwift.framework */; };
+		468F52F82035657900BC0773 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468F52F62035657900BC0773 /* RxCocoa.framework */; };
+		468F52FA203566A100BC0773 /* UUID+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52F9203566A100BC0773 /* UUID+Extensions.swift */; };
+		468F52FC203568A700BC0773 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52FB203568A700BC0773 /* MenuViewController.swift */; };
+		468F52FE203568B500BC0773 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468F52FD203568B500BC0773 /* MenuViewController.storyboard */; };
+		468F53022035F42A00BC0773 /* ImagePointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F53012035F42A00BC0773 /* ImagePointAnnotation.swift */; };
 		7963277BF013C0DE0B3FD2E5 /* Pods_WebyHackCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +55,14 @@
 		468F52E020354E8700BC0773 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		468F52EB2035509000BC0773 /* FuturaDisOutP.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaDisOutP.ttf; sourceTree = "<group>"; };
 		468F52EE203561EF00BC0773 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		468F52F12035644D00BC0773 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		468F52F32035645900BC0773 /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		468F52F52035657900BC0773 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		468F52F62035657900BC0773 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		468F52F9203566A100BC0773 /* UUID+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UUID+Extensions.swift"; sourceTree = "<group>"; };
+		468F52FB203568A700BC0773 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		468F52FD203568B500BC0773 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		468F53012035F42A00BC0773 /* ImagePointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePointAnnotation.swift; sourceTree = "<group>"; };
 		AAC774BD4FAC7518599AA356 /* Pods-WebyHackCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebyHackCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1330EBFF25E8A0AA60052 /* Pods-WebyHackCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468F52F72035657900BC0773 /* RxSwift.framework in Frameworks */,
+				468F52F82035657900BC0773 /* RxCocoa.framework in Frameworks */,
 				7963277BF013C0DE0B3FD2E5 /* Pods_WebyHackCamp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +134,7 @@
 				468F52DF20354E8700BC0773 /* UITableView+Extensions.swift */,
 				468F52DA20354E8700BC0773 /* UIView+Extensions.swift */,
 				468F52DB20354E8700BC0773 /* URL+Extensions.swift */,
+				468F52F9203566A100BC0773 /* UUID+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,6 +154,10 @@
 			children = (
 				468F52C12035410F00BC0773 /* PlayerViewController.swift */,
 				468F52C32035410F00BC0773 /* PlayerViewController.storyboard */,
+				468F52F12035644D00BC0773 /* MapViewController.swift */,
+				468F52F32035645900BC0773 /* MapViewController.storyboard */,
+				468F52FB203568A700BC0773 /* MenuViewController.swift */,
+				468F52FD203568B500BC0773 /* MenuViewController.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -152,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				468F52EE203561EF00BC0773 /* Items.swift */,
+				468F53012035F42A00BC0773 /* ImagePointAnnotation.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -159,6 +183,8 @@
 		D409F24E26D7D82C58DF4284 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				468F52F62035657900BC0773 /* RxCocoa.framework */,
+				468F52F52035657900BC0773 /* RxSwift.framework */,
 				EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */,
 			);
 			name = Frameworks;
@@ -177,6 +203,7 @@
 				468F52BA2035410F00BC0773 /* Resources */,
 				8ECECC827A33FF6C06FA6EC9 /* [CP] Embed Pods Frameworks */,
 				C9614C5C60B24A69B6E0B109 /* [CP] Copy Pods Resources */,
+				468F52F0203563FB00BC0773 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -226,7 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468F52F42035645900BC0773 /* MapViewController.storyboard in Resources */,
 				468F52EC2035509000BC0773 /* FuturaDisOutP.ttf in Resources */,
+				468F52FE203568B500BC0773 /* MenuViewController.storyboard in Resources */,
 				468F52CA2035410F00BC0773 /* LaunchScreen.storyboard in Resources */,
 				468F52C72035410F00BC0773 /* Assets.xcassets in Resources */,
 				468F52C52035410F00BC0773 /* PlayerViewController.storyboard in Resources */,
@@ -236,6 +265,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		468F52F0203563FB00BC0773 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftLocation.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		8ECECC827A33FF6C06FA6EC9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,12 +339,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468F52FA203566A100BC0773 /* UUID+Extensions.swift in Sources */,
 				468F52E220354E8700BC0773 /* UIView+Extensions.swift in Sources */,
 				468F52D620354E7E00BC0773 /* Reusable.swift in Sources */,
+				468F53022035F42A00BC0773 /* ImagePointAnnotation.swift in Sources */,
 				468F52D720354E7E00BC0773 /* NibLoadable.swift in Sources */,
 				468F52E820354E8700BC0773 /* UIColor+Extensions.swift in Sources */,
 				468F52E720354E8700BC0773 /* UITableView+Extensions.swift in Sources */,
 				468F52E520354E8700BC0773 /* Date+Extensions.swift in Sources */,
+				468F52FC203568A700BC0773 /* MenuViewController.swift in Sources */,
 				468F52EF203561EF00BC0773 /* Items.swift in Sources */,
 				468F52E620354E8700BC0773 /* UICollectionView+Extensions.swift in Sources */,
 				468F52E120354E8700BC0773 /* UIApplication+Extensions.swift in Sources */,
@@ -307,6 +355,7 @@
 				468F52E320354E8700BC0773 /* URL+Extensions.swift in Sources */,
 				468F52C22035410F00BC0773 /* PlayerViewController.swift in Sources */,
 				468F52C02035410F00BC0773 /* AppDelegate.swift in Sources */,
+				468F52F22035644D00BC0773 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +495,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4S4333JDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WebyHackCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.touyou.WebyHackCamp;
@@ -462,6 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4S4333JDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WebyHackCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.touyou.WebyHackCamp;

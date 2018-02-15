@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAA-L5-Ze9">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="rlr-7N-fCk">
+            <objects>
+                <viewController id="bAA-L5-Ze9" customClass="MapViewController" customModule="WebyHackCamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqs-Sg-t2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BRr-j6-xp0">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkH-wd-Csa">
+                                <rect key="frame" x="677" y="20" width="39" height="30"/>
+                                <state key="normal" title="menu"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="bottom" secondItem="EsA-ZQ-CdX" secondAttribute="bottom" id="8gF-J0-hFg"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="top" secondItem="EsA-ZQ-CdX" secondAttribute="top" id="KUl-vV-csF"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="leading" secondItem="EsA-ZQ-CdX" secondAttribute="leading" id="acl-OX-9zx"/>
+                            <constraint firstItem="AkH-wd-Csa" firstAttribute="top" secondItem="EsA-ZQ-CdX" secondAttribute="top" constant="20" id="ixm-JV-Hlw"/>
+                            <constraint firstItem="EsA-ZQ-CdX" firstAttribute="trailing" secondItem="AkH-wd-Csa" secondAttribute="trailing" constant="20" id="opl-ju-myq"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="trailing" secondItem="EsA-ZQ-CdX" secondAttribute="trailing" id="shc-1k-HTS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EsA-ZQ-CdX"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="BRr-j6-xp0" id="43Y-F1-Vhc"/>
+                        <outlet property="menuButton" destination="AkH-wd-Csa" id="npm-fK-ltN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSY-ec-EOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508.69565217391306" y="62.318840579710148"/>
+        </scene>
+    </scenes>
+</document>

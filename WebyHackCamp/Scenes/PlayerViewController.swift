@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayerViewController.swift
 //  WebyHackCamp
 //
 //  Created by 藤井陽介 on 2018/02/15.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlayerViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var visualPad: UIView!
+    @IBOutlet weak var audioPad: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,3 +27,6 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - Storyboard Instantiable
+
+extension PlayerViewController: StoryboardInstantiable {}

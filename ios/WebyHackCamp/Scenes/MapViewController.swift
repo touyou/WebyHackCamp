@@ -49,7 +49,14 @@ class MapViewController: UIViewController {
 
     // MARK: Private
 
-    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var mapView: MKMapView! {
+
+        didSet {
+
+            mapView.setCenter(mapView.userLocation.coordinate, animated: true)
+            mapView.userTrackingMode = .follow
+        }
+    }
     @IBOutlet private weak var menuButton: UIButton!
     private var disposeBag = DisposeBag()
     private var items: [Item] = []
@@ -83,7 +90,8 @@ extension MapViewController: MKMapViewDelegate {
                 annotationView.image = UIImage(named: "event")
             }
         }
-        return annotation
+        annotationView.annotation = annotation
+        return annotationView
     }
 }
 

@@ -15,8 +15,10 @@ class ImagePointAnnotation: MKPointAnnotation {
 
     init(_ item: Item) {
 
+        super.init()
         self.item = item
+        self.coordinate = CLLocationCoordinate2DMake(self.item.y, self.item.x)
+        self.title = self.item.name
     }
 
-    
 }

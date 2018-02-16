@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftOSC
+import RxSwift
+import RxCocoa
 
 // MARK: - PlayerViewController
 
@@ -21,13 +23,31 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        let session = URLSession(configuration: .default)
+        var request = URLRequest(url: URL(string: "http://muked-touyou.c9users.io:8080/\(UUID().currentDeviceId)/lives")!)
+        request.httpMethod = "GET"
+        session.rx.data(request: request).subscribe { event in
+
+            switch event {
+            case .next(let data):
+                let decoder = JSONDecoder()
+                try! print(JSONSerialization.jsonObject(with: data, options: []))
+                self.items = try! decoder.decode([Item].self, from: data)
+            case .completed:
+                print("completed")
+            case .error(let error):
+                print(error)
+            }
+            }.disposed(by: disposeBag)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         if let location = event?.touches(for: audioPad)?.first?.location(in: audioPad) {
 
-            print("x: \(location.x), y: \(location.y)")
+            let message = OSCMessage(OSCAddressPattern("/"), Double(location.x), Double(location.y))
+
         }
     }
 
@@ -38,8 +58,6 @@ class PlayerViewController: UIViewController {
 
         didSet {
 
-//            visualPad.cornerRadius = visualPad.bounds.width / 2
-//            visualPad.clipsToBounds = true
             visualPad.isUserInteractionEnabled = true
 
             let leftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.leftSwipeVisualPad(_:)))
@@ -57,13 +75,20 @@ class PlayerViewController: UIViewController {
 
         didSet {
 
-//            audioPad.cornerRadius = audioPad.bounds.width / 2
-//            audioPad.clipsToBounds = true
             audioPad.isUserInteractionEnabled = true
+        }
+    }
+    @IBOutlet weak var colorIndicator: UIView! {
+
+        didSet {
+
+            colorIndicator.cornerRadius = colorIndicator.bounds.width / 2
         }
     }
 
     private var client = OSCClient(address: "192.168.100.37", port: 10000)
+    private var disposeBag = DisposeBag()
+    private var items: [Item] = []
 
     @objc private func leftSwipeVisualPad(_ sender: Any) {
 

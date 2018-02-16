@@ -10,11 +10,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="FuturaDisOutP.ttf">
-            <string>FuturaDisOutP</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Player View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,23 +19,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Day3_409.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0Dj-qO-jLm">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G37-sC-7jt">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="0.85073309075342463" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live #20 @Shibuya.Japan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBo-Oz-E8O">
-                                <rect key="frame" x="0.0" y="20" width="736" height="27"/>
-                                <fontDescription key="fontDescription" name="FuturaDisOutP" family="Futura Display Outline P" pointSize="27"/>
+                                <rect key="frame" x="0.0" y="20" width="736" height="78.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-Wf-xD1">
-                                <rect key="frame" x="50" y="97" width="267" height="267"/>
+                                <rect key="frame" x="49.999999999999986" y="128.33333333333337" width="235.66666666666663" height="235.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WdX-Wf-xD1" secondAttribute="height" multiplier="1:1" id="a4O-xO-b01"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,16 +50,43 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G34-Iv-OPu">
-                                <rect key="frame" x="419" y="97" width="267" height="267"/>
+                                <rect key="frame" x="450.33333333333331" y="128.33333333333337" width="235.66666666666669" height="235.66666666666663"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider" translatesAutoresizingMaskIntoConstraints="NO" id="sGe-qh-rpF">
+                                        <rect key="frame" x="30" y="30" width="175.66666666666666" height="176"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzY-c0-UrG">
+                                        <rect key="frame" x="100.00000000000006" y="164.99999999999997" width="34" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XzY-c0-UrG" secondAttribute="height" multiplier="1:1" id="XKH-VJ-iBX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="XzY-c0-UrG" firstAttribute="centerX" secondItem="G34-Iv-OPu" secondAttribute="centerX" id="1wD-a4-BSG"/>
                                     <constraint firstAttribute="width" secondItem="G34-Iv-OPu" secondAttribute="height" multiplier="1:1" id="K08-ai-dk0"/>
+                                    <constraint firstItem="XzY-c0-UrG" firstAttribute="leading" secondItem="G34-Iv-OPu" secondAttribute="leading" constant="100" id="NMh-WZ-Ctn"/>
+                                    <constraint firstItem="sGe-qh-rpF" firstAttribute="top" secondItem="G34-Iv-OPu" secondAttribute="top" constant="30" id="OOa-8H-548"/>
+                                    <constraint firstItem="sGe-qh-rpF" firstAttribute="centerX" secondItem="G34-Iv-OPu" secondAttribute="centerX" id="P1a-7q-jFK"/>
+                                    <constraint firstItem="sGe-qh-rpF" firstAttribute="centerY" secondItem="G34-Iv-OPu" secondAttribute="centerY" id="Ywc-Db-sIA"/>
+                                    <constraint firstItem="XzY-c0-UrG" firstAttribute="top" secondItem="G34-Iv-OPu" secondAttribute="top" constant="165" id="ewR-2c-6VZ"/>
+                                    <constraint firstItem="sGe-qh-rpF" firstAttribute="leading" secondItem="G34-Iv-OPu" secondAttribute="leading" constant="30" id="gGN-3a-CvV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,27 +96,40 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="G34-Iv-OPu" firstAttribute="top" secondItem="WBo-Oz-E8O" secondAttribute="bottom" constant="50" id="0IM-qj-9KM"/>
+                            <constraint firstItem="0Dj-qO-jLm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0A8-as-1N5"/>
+                            <constraint firstItem="G34-Iv-OPu" firstAttribute="top" secondItem="WBo-Oz-E8O" secondAttribute="bottom" constant="30" id="0IM-qj-9KM"/>
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="12H-d3-i8e"/>
+                            <constraint firstItem="G37-sC-7jt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2U3-AH-s02"/>
                             <constraint firstItem="WdX-Wf-xD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="EXa-dV-gdM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WdX-Wf-xD1" secondAttribute="bottom" constant="50" id="NVt-uJ-86t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G34-Iv-OPu" secondAttribute="trailing" constant="50" id="Og1-hq-abk"/>
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Plc-4h-kIH"/>
+                            <constraint firstItem="G37-sC-7jt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V8N-li-4so"/>
+                            <constraint firstItem="0Dj-qO-jLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YMy-XY-TBa"/>
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b6P-yl-8jR"/>
+                            <constraint firstItem="0Dj-qO-jLm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bOi-KR-Ejh"/>
+                            <constraint firstItem="0Dj-qO-jLm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hzB-q5-FNg"/>
+                            <constraint firstItem="G37-sC-7jt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iMM-B7-0jn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G34-Iv-OPu" secondAttribute="bottom" constant="50" id="qJI-Mx-0Ij"/>
-                            <constraint firstItem="WdX-Wf-xD1" firstAttribute="top" secondItem="WBo-Oz-E8O" secondAttribute="bottom" constant="50" id="xf0-pB-bqb"/>
+                            <constraint firstItem="WdX-Wf-xD1" firstAttribute="top" secondItem="WBo-Oz-E8O" secondAttribute="bottom" constant="30" id="xf0-pB-bqb"/>
+                            <constraint firstItem="G37-sC-7jt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgq-C9-ylb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="audioPad" destination="WdX-Wf-xD1" id="zJz-xl-xkc"/>
+                        <outlet property="colorIndicator" destination="XzY-c0-UrG" id="Or1-Gw-mqg"/>
                         <outlet property="titleLabel" destination="WBo-Oz-E8O" id="eI0-Rv-dwF"/>
                         <outlet property="visualPad" destination="G34-Iv-OPu" id="ogJ-kt-VkO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.833583208395808" y="16.800000000000001"/>
+            <point key="canvasLocation" x="32.608695652173914" y="15.942028985507248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Day3_409.jpg" width="2000" height="1333"/>
+        <image name="slider" width="165" height="176"/>
+    </resources>
 </document>

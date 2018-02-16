@@ -36,6 +36,7 @@
 		468F530A203655B800BC0773 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468F5308203655B800BC0773 /* MenuCollectionViewCell.xib */; };
 		468F530D203661B800BC0773 /* MenuCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F530B203661B800BC0773 /* MenuCollectionReusableView.swift */; };
 		468F530E203661B800BC0773 /* MenuCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468F530C203661B800BC0773 /* MenuCollectionReusableView.xib */; };
+		468F53102036ADFC00BC0773 /* Day3_409.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 468F530F2036ADFC00BC0773 /* Day3_409.jpg */; };
 		7963277BF013C0DE0B3FD2E5 /* Pods_WebyHackCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		468F5308203655B800BC0773 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		468F530B203661B800BC0773 /* MenuCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionReusableView.swift; sourceTree = "<group>"; };
 		468F530C203661B800BC0773 /* MenuCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionReusableView.xib; sourceTree = "<group>"; };
+		468F530F2036ADFC00BC0773 /* Day3_409.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Day3_409.jpg; sourceTree = "<group>"; };
 		AAC774BD4FAC7518599AA356 /* Pods-WebyHackCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebyHackCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1330EBFF25E8A0AA60052 /* Pods-WebyHackCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				468F52C62035410F00BC0773 /* Assets.xcassets */,
 				468F52EB2035509000BC0773 /* FuturaDisOutP.ttf */,
+				468F530F2036ADFC00BC0773 /* Day3_409.jpg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				468F52CA2035410F00BC0773 /* LaunchScreen.storyboard in Resources */,
 				468F52C72035410F00BC0773 /* Assets.xcassets in Resources */,
 				468F530E203661B800BC0773 /* MenuCollectionReusableView.xib in Resources */,
+				468F53102036ADFC00BC0773 /* Day3_409.jpg in Resources */,
 				468F52C52035410F00BC0773 /* PlayerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

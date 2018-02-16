@@ -27,13 +27,16 @@
                                 <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="0.85073309075342463" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live #20 @Shibuya.Japan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBo-Oz-E8O">
-                                <rect key="frame" x="0.0" y="20" width="736" height="78.333333333333329"/>
+                                <rect key="frame" x="0.0" y="20" width="736" height="56"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-Ec-0jx">
+                                <rect key="frame" x="60" y="116" width="238" height="238"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-Wf-xD1">
-                                <rect key="frame" x="49.999999999999986" y="128.33333333333337" width="235.66666666666663" height="235.66666666666663"/>
+                                <rect key="frame" x="50" y="106" width="258" height="258"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WdX-Wf-xD1" secondAttribute="height" multiplier="1:1" id="a4O-xO-b01"/>
                                 </constraints>
@@ -50,13 +53,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G34-Iv-OPu">
-                                <rect key="frame" x="450.33333333333331" y="128.33333333333337" width="235.66666666666669" height="235.66666666666663"/>
+                                <rect key="frame" x="428" y="106" width="258" height="258"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider" translatesAutoresizingMaskIntoConstraints="NO" id="sGe-qh-rpF">
-                                        <rect key="frame" x="30" y="30" width="175.66666666666666" height="176"/>
+                                        <rect key="frame" x="30" y="30.000000000000014" width="198" height="198.33333333333337"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzY-c0-UrG">
-                                        <rect key="frame" x="100.00000000000006" y="164.99999999999997" width="34" height="34"/>
+                                        <rect key="frame" x="99.999999999999986" y="165" width="56.333333333333329" height="56.333333333333343"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XzY-c0-UrG" secondAttribute="height" multiplier="1:1" id="XKH-VJ-iBX"/>
@@ -93,6 +96,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHF-d4-l9u">
+                                <rect key="frame" x="686" y="20" width="30" height="30"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dn7-t4-0VO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -101,16 +113,22 @@
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="12H-d3-i8e"/>
                             <constraint firstItem="G37-sC-7jt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2U3-AH-s02"/>
                             <constraint firstItem="WdX-Wf-xD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="EXa-dV-gdM"/>
+                            <constraint firstItem="wZw-Ec-0jx" firstAttribute="top" secondItem="WdX-Wf-xD1" secondAttribute="top" constant="10" id="FHq-l6-fNj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WdX-Wf-xD1" secondAttribute="bottom" constant="50" id="NVt-uJ-86t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G34-Iv-OPu" secondAttribute="trailing" constant="50" id="Og1-hq-abk"/>
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Plc-4h-kIH"/>
+                            <constraint firstItem="wZw-Ec-0jx" firstAttribute="bottom" secondItem="WdX-Wf-xD1" secondAttribute="bottom" constant="-10" id="SXP-GI-9ea"/>
+                            <constraint firstItem="yHF-d4-l9u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UKa-GP-4hC"/>
                             <constraint firstItem="G37-sC-7jt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V8N-li-4so"/>
                             <constraint firstItem="0Dj-qO-jLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YMy-XY-TBa"/>
                             <constraint firstItem="WBo-Oz-E8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b6P-yl-8jR"/>
                             <constraint firstItem="0Dj-qO-jLm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bOi-KR-Ejh"/>
+                            <constraint firstItem="wZw-Ec-0jx" firstAttribute="leading" secondItem="WdX-Wf-xD1" secondAttribute="leading" constant="10" id="dH0-5l-Pit"/>
                             <constraint firstItem="0Dj-qO-jLm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hzB-q5-FNg"/>
                             <constraint firstItem="G37-sC-7jt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iMM-B7-0jn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G34-Iv-OPu" secondAttribute="bottom" constant="50" id="qJI-Mx-0Ij"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHF-d4-l9u" secondAttribute="trailing" constant="20" id="tlZ-Rj-jt0"/>
+                            <constraint firstItem="wZw-Ec-0jx" firstAttribute="trailing" secondItem="WdX-Wf-xD1" secondAttribute="trailing" constant="-10" id="uiY-6X-VQb"/>
                             <constraint firstItem="WdX-Wf-xD1" firstAttribute="top" secondItem="WBo-Oz-E8O" secondAttribute="bottom" constant="30" id="xf0-pB-bqb"/>
                             <constraint firstItem="G37-sC-7jt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgq-C9-ylb"/>
                         </constraints>
@@ -131,5 +149,6 @@
     <resources>
         <image name="Day3_409.jpg" width="2000" height="1333"/>
         <image name="slider" width="165" height="176"/>
+        <image name="target" width="235" height="238"/>
     </resources>
 </document>

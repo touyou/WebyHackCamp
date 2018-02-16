@@ -11,6 +11,7 @@ import MapKit
 import RxSwift
 import RxCocoa
 import CoreLocation
+import STZPopupView
 
 // MARK: - MapViewController
 
@@ -125,23 +126,43 @@ extension MapViewController: MKMapViewDelegate {
 
         if let item = (view.annotation as? ImagePointAnnotation)?.item {
 
-            let session = URLSession(configuration: .default)
-            var request = URLRequest(url: URL(string: "http://muked-touyou.c9users.io:8080/\(UUID().currentDeviceId)/get?live_id=\(item.id)")!)
-            request.httpMethod = "POST"
-            print(request)
-            session.rx.data(request: request).subscribe { event in
+            switch item.tag {
+            case .sound, .visual:
+                let session = URLSession(configuration: .default)
+                var request = URLRequest(url: URL(string: "http://muked-touyou.c9users.io:8080/\(UUID().currentDeviceId)/get?live_id=\(item.id)")!)
+                request.httpMethod = "POST"
+                print(request)
+                session.rx.data(request: request).subscribe { event in
 
-                switch event {
-                case .next(let data):
-                    print(data)
-                case .completed:
-                    print("completed")
-                case .error(let error):
-                    print(error)
-                }
-                }.disposed(by: disposeBag)
-            mapView.removeAnnotation(view.annotation!)
+                    switch event {
+                    case .next(let data):
+                        print(data)
+                    case .completed:
+                        print("completed")
+                    case .error(let error):
+                        print(error)
+                    }
+                    }.disposed(by: disposeBag)
+                mapView.removeAnnotation(view.annotation!)
+            case .event:
+//                let popup = EnterEventView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width - 100, height: UIScreen.main.bounds.size.height - 50))
+//                popup.delegate = self
+//                let popupConfig = STZPopupViewConfig()
+//                popupConfig.dismissTouchBackground = true
+////                popupConfig.overlayColor = UIColor(white: 1.0, alpha: 0.0)
+//                presentPopupView(popup, config: popupConfig)
+                self.push()
+            }
         }
+    }
+}
+
+extension MapViewController: EnterEventViewDelegate {
+
+    func push() {
+
+        let playerViewController = PlayerViewController.instantiate()
+        present(playerViewController, animated: true, completion: nil)
     }
 }
 

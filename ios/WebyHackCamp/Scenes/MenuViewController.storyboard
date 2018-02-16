@@ -29,6 +29,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rgZ-ab-t2N" id="Inv-Yz-cc9"/>
+                                    <outlet property="delegate" destination="rgZ-ab-t2N" id="pk7-sL-OKU"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-Mt-IvX">
                                 <rect key="frame" x="697" y="15" width="24" height="22"/>

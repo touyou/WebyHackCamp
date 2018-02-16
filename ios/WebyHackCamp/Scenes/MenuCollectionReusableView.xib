@@ -25,7 +25,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-SG-bwc">
-                            <rect key="frame" x="10" y="147" width="491" height="1"/>
+                            <rect key="frame" x="20" y="147" width="471" height="1"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="F1c-qF-V3s"/>
@@ -34,11 +34,11 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="4Cw-SG-bwc" firstAttribute="leading" secondItem="8WG-A6-fsc" secondAttribute="leading" constant="10" id="441-Xv-nq0"/>
+                        <constraint firstItem="4Cw-SG-bwc" firstAttribute="leading" secondItem="8WG-A6-fsc" secondAttribute="leading" constant="20" id="441-Xv-nq0"/>
                         <constraint firstItem="4Cw-SG-bwc" firstAttribute="top" secondItem="yuu-eu-8ry" secondAttribute="bottom" constant="3" id="AS9-0U-Itr"/>
                         <constraint firstItem="yuu-eu-8ry" firstAttribute="centerX" secondItem="8WG-A6-fsc" secondAttribute="centerX" id="Pbo-c6-6Jf"/>
                         <constraint firstAttribute="bottom" secondItem="4Cw-SG-bwc" secondAttribute="bottom" constant="3" id="TtB-yr-YgB"/>
-                        <constraint firstAttribute="trailing" secondItem="4Cw-SG-bwc" secondAttribute="trailing" constant="10" id="Vu6-U6-AVh"/>
+                        <constraint firstAttribute="trailing" secondItem="4Cw-SG-bwc" secondAttribute="trailing" constant="20" id="Vu6-U6-AVh"/>
                         <constraint firstItem="yuu-eu-8ry" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8WG-A6-fsc" secondAttribute="top" constant="20" id="nh1-yp-RD4"/>
                     </constraints>
                 </view>

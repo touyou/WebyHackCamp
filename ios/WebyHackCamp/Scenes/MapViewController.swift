@@ -11,6 +11,7 @@ import MapKit
 import RxSwift
 import RxCocoa
 import CoreLocation
+import STZPopupView
 
 // MARK: - MapViewController
 
@@ -36,27 +37,27 @@ class MapViewController: UIViewController {
         }
 
         let session = URLSession(configuration: .default)
-//        var request = URLRequest(url: URL(string: "")!)
-//        request.httpMethod = "GET"
-//        session.rx.data(request: URLRequest(url: URL(string: "")!)).subscribe { event in
-//
-//            switch event {
-//            case .next(let data):
-//                let decoder = JSONDecoder()
-//                self.items = try! decoder.decode([Item].self, from: data)
-//            case .completed:
-//                print("completed")
-//            case .error(let error):
-//                print(error)
-//            }
-//            }.disposed(by: disposeBag)
+        var request = URLRequest(url: URL(string: "http://muked-touyou.c9users.io:8080/lives")!)
+        request.httpMethod = "GET"
+        session.rx.data(request: request).subscribe { event in
 
+            switch event {
+            case .next(let data):
+                let decoder = JSONDecoder()
+                try! print(JSONSerialization.jsonObject(with: data, options: []))
+                self.items = try! decoder.decode([Item].self, from: data)
+                self.updateAnnotation()
+            case .completed:
+                print("completed")
+            case .error(let error):
+                print(error)
+            }
+            }.disposed(by: disposeBag)
     }
 
     override func viewDidAppear(_ animated: Bool) {
 
         super.viewDidAppear(animated)
-        
     }
 
     // MARK: Private
@@ -82,6 +83,15 @@ class MapViewController: UIViewController {
             let menuViewController = MenuViewController.instantiate()
             self.present(menuViewController, animated: true, completion: nil)
             }.disposed(by: disposeBag)
+    }
+
+    private func updateAnnotation() {
+
+        DispatchQueue.main.async {
+
+            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.mapView.addAnnotations(self.items.map { ImagePointAnnotation($0) })
+        }
     }
 }
 
@@ -110,6 +120,49 @@ extension MapViewController: MKMapViewDelegate {
         }
         annotationView.annotation = annotation
         return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
+        if let item = (view.annotation as? ImagePointAnnotation)?.item {
+
+            switch item.tag {
+            case .sound, .visual:
+                let session = URLSession(configuration: .default)
+                var request = URLRequest(url: URL(string: "http://muked-touyou.c9users.io:8080/\(UUID().currentDeviceId)/get?live_id=\(item.id)")!)
+                request.httpMethod = "POST"
+                print(request)
+                session.rx.data(request: request).subscribe { event in
+
+                    switch event {
+                    case .next(let data):
+                        print(data)
+                    case .completed:
+                        print("completed")
+                    case .error(let error):
+                        print(error)
+                    }
+                    }.disposed(by: disposeBag)
+                mapView.removeAnnotation(view.annotation!)
+            case .event:
+//                let popup = EnterEventView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width - 100, height: UIScreen.main.bounds.size.height - 50))
+//                popup.delegate = self
+//                let popupConfig = STZPopupViewConfig()
+//                popupConfig.dismissTouchBackground = true
+////                popupConfig.overlayColor = UIColor(white: 1.0, alpha: 0.0)
+//                presentPopupView(popup, config: popupConfig)
+                self.push()
+            }
+        }
+    }
+}
+
+extension MapViewController: EnterEventViewDelegate {
+
+    func push() {
+
+        let playerViewController = PlayerViewController.instantiate()
+        present(playerViewController, animated: true, completion: nil)
     }
 }
 

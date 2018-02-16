@@ -29,6 +29,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rgZ-ab-t2N" id="Inv-Yz-cc9"/>
+                                    <outlet property="delegate" destination="rgZ-ab-t2N" id="pk7-sL-OKU"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-Mt-IvX">
                                 <rect key="frame" x="697" y="15" width="24" height="22"/>
@@ -124,11 +128,11 @@
                             <constraint firstItem="Ye1-lA-FAE" firstAttribute="trailing" secondItem="1hV-Mt-IvX" secondAttribute="trailing" constant="15" id="1kw-VF-uYf"/>
                             <constraint firstItem="kY8-RZ-ue4" firstAttribute="top" secondItem="oqt-a8-BgA" secondAttribute="bottom" constant="60" id="7QJ-mK-7FC"/>
                             <constraint firstItem="81U-5k-3TO" firstAttribute="top" secondItem="kY8-RZ-ue4" secondAttribute="bottom" id="Edp-sM-SVg"/>
+                            <constraint firstItem="kY8-RZ-ue4" firstAttribute="leading" secondItem="4Ax-Nm-H5V" secondAttribute="trailing" id="G4T-8k-vah"/>
                             <constraint firstItem="oqt-a8-BgA" firstAttribute="top" secondItem="vkC-Wl-bbV" secondAttribute="top" id="Jo9-my-1Zi"/>
                             <constraint firstItem="SKL-55-AhC" firstAttribute="top" secondItem="vkC-Wl-bbV" secondAttribute="bottom" id="MjT-54-ANE"/>
                             <constraint firstItem="4Ax-Nm-H5V" firstAttribute="bottom" secondItem="Ye1-lA-FAE" secondAttribute="bottom" id="N5h-WV-y42"/>
                             <constraint firstItem="SKL-55-AhC" firstAttribute="centerX" secondItem="vkC-Wl-bbV" secondAttribute="centerX" constant="1" id="THF-58-sDb"/>
-                            <constraint firstItem="kY8-RZ-ue4" firstAttribute="leading" secondItem="4Ax-Nm-H5V" secondAttribute="trailing" id="WSV-fD-7AE"/>
                             <constraint firstItem="Ye1-lA-FAE" firstAttribute="trailing" secondItem="vkC-Wl-bbV" secondAttribute="trailing" constant="10" id="Whe-fl-sdu"/>
                             <constraint firstItem="RdM-ey-mfy" firstAttribute="centerX" secondItem="kY8-RZ-ue4" secondAttribute="centerX" id="dD8-ng-GRb"/>
                             <constraint firstItem="vkC-Wl-bbV" firstAttribute="top" secondItem="1hV-Mt-IvX" secondAttribute="bottom" constant="60" id="f28-L3-sdM"/>
@@ -136,12 +140,12 @@
                             <constraint firstItem="81U-5k-3TO" firstAttribute="centerX" secondItem="kY8-RZ-ue4" secondAttribute="centerX" id="iWr-T2-52S"/>
                             <constraint firstItem="oqt-a8-BgA" firstAttribute="centerX" secondItem="vkC-Wl-bbV" secondAttribute="centerX" id="lNi-UA-JVt"/>
                             <constraint firstItem="1hV-Mt-IvX" firstAttribute="top" secondItem="Ye1-lA-FAE" secondAttribute="top" constant="15" id="lsn-vo-oIj"/>
+                            <constraint firstItem="kY8-RZ-ue4" firstAttribute="width" secondItem="vkC-Wl-bbV" secondAttribute="width" id="mW8-Cu-gm5"/>
                             <constraint firstItem="1hV-Mt-IvX" firstAttribute="leading" secondItem="4Ax-Nm-H5V" secondAttribute="trailing" constant="10" id="oDa-Zr-TYN"/>
                             <constraint firstItem="RdM-ey-mfy" firstAttribute="top" secondItem="kY8-RZ-ue4" secondAttribute="top" id="pGL-vy-zFD"/>
                             <constraint firstItem="oqt-a8-BgA" firstAttribute="bottom" secondItem="SKL-55-AhC" secondAttribute="bottom" id="sZN-XO-YOg"/>
                             <constraint firstItem="RdM-ey-mfy" firstAttribute="bottom" secondItem="81U-5k-3TO" secondAttribute="bottom" id="tNA-V0-MW5"/>
                             <constraint firstItem="4Ax-Nm-H5V" firstAttribute="leading" secondItem="Ye1-lA-FAE" secondAttribute="leading" id="x1H-Bd-kwt"/>
-                            <constraint firstAttribute="trailing" secondItem="kY8-RZ-ue4" secondAttribute="trailing" constant="9" id="z1a-vn-bAO"/>
                             <constraint firstItem="4Ax-Nm-H5V" firstAttribute="top" secondItem="Ye1-lA-FAE" secondAttribute="top" id="zSI-yc-aqt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ye1-lA-FAE"/>

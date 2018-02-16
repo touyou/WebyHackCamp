@@ -10,10 +10,6 @@ import UIKit
 
 extension UIColor {
 
-}
-
-extension UIColor {
-
     convenience init(hex: String) {
 
         let colorString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased().filter { "#" != $0 }
@@ -22,6 +18,12 @@ extension UIColor {
         Scanner(string: colorString).scanHexInt32(&rgb)
 
         self.init(red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0, green: CGFloat((rgb & 0x00FF00) >> 8) / 255.0, blue: CGFloat(rgb & 0x0000FF) / 255.0, alpha: alpha)
+    }
+    
+    func convertToRGB() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+
+        let components = self.cgColor.components! // UIColorをCGColorに変換し、RGBとAlphaがそれぞれCGFloatで配列として取得できる
+        return (red: components[0], green: components[1], blue: components[2], alpha: components[3])
     }
 }
 

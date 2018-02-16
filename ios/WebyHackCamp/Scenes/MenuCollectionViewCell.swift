@@ -7,9 +7,15 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 // MARK: - MenuCollectionViewCell
+
+protocol MenuCellDelegate: class {
+
+    func tappedPlayButton(_ item: Item)
+}
 
 class MenuCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
 
@@ -23,6 +29,12 @@ class MenuCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
         didSet {
 
             typedButton.imageView?.contentMode = .scaleAspectFit
+            typedButton.isUserInteractionEnabled = true
+            typedButton.rx.tap.bind {
+
+                self.selectedLabel.isHidden = !self.selectedLabel.isHidden
+                self.delegate?.tappedPlayButton(self.item)
+            }.dispose()
         }
     }
     @IBOutlet weak var selectedLabel: UILabel! {
@@ -33,17 +45,23 @@ class MenuCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
         }
     }
     
-    var type: Item.ItemType! {
+    var item: Item! {
 
         didSet {
 
-            if case .sound = type! {
-
-                typedButton.setImage(UIImage(named: "play")!, for: .normal)
-                typedButton.tintColor = UIColor(hex: "E62031")
+            typedButton.setImage(UIImage(named: "play")!, for: .normal)
+            typedButton.tintColor = item.tag == .sound ? UIColor(hex: "E62031") : item.name.color
+            switch item.tag {
+            case .sound:
+                typeImageView.image = #imageLiteral(resourceName: "music")
+            default:
+                typeImageView.image = #imageLiteral(resourceName: "visual")
             }
+            nameLabel.text = item.name
         }
     }
+
+    weak var delegate: MenuCellDelegate?
 
     // MARK: UICollectionViewCell
 

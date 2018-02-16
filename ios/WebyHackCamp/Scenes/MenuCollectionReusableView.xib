@@ -18,18 +18,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-A6-fsc">
                     <rect key="frame" x="0.0" y="0.0" width="511" height="151"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入手状況" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuu-eu-8ry">
-                            <rect key="frame" x="8" y="10" width="145.5" height="133"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuu-eu-8ry">
+                            <rect key="frame" x="180.5" y="101" width="150" height="43"/>
                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-SG-bwc">
+                            <rect key="frame" x="20" y="147" width="471" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="F1c-qF-V3s"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.1294117719" green="0.1294117719" blue="0.1294117719" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="yuu-eu-8ry" firstAttribute="leading" secondItem="8WG-A6-fsc" secondAttribute="leading" constant="8" id="3s1-Xu-j5v"/>
-                        <constraint firstAttribute="bottom" secondItem="yuu-eu-8ry" secondAttribute="bottom" constant="8" id="9cY-1r-cUq"/>
-                        <constraint firstItem="yuu-eu-8ry" firstAttribute="top" secondItem="8WG-A6-fsc" secondAttribute="top" constant="10" id="nh1-yp-RD4"/>
+                        <constraint firstItem="4Cw-SG-bwc" firstAttribute="leading" secondItem="8WG-A6-fsc" secondAttribute="leading" constant="20" id="441-Xv-nq0"/>
+                        <constraint firstItem="4Cw-SG-bwc" firstAttribute="top" secondItem="yuu-eu-8ry" secondAttribute="bottom" constant="3" id="AS9-0U-Itr"/>
+                        <constraint firstItem="yuu-eu-8ry" firstAttribute="centerX" secondItem="8WG-A6-fsc" secondAttribute="centerX" id="Pbo-c6-6Jf"/>
+                        <constraint firstAttribute="bottom" secondItem="4Cw-SG-bwc" secondAttribute="bottom" constant="3" id="TtB-yr-YgB"/>
+                        <constraint firstAttribute="trailing" secondItem="4Cw-SG-bwc" secondAttribute="trailing" constant="20" id="Vu6-U6-AVh"/>
+                        <constraint firstItem="yuu-eu-8ry" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8WG-A6-fsc" secondAttribute="top" constant="20" id="nh1-yp-RD4"/>
                     </constraints>
                 </view>
             </subviews>
@@ -40,7 +50,7 @@
                 <constraint firstAttribute="trailing" secondItem="8WG-A6-fsc" secondAttribute="trailing" id="kug-dA-fhl"/>
                 <constraint firstItem="8WG-A6-fsc" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="piT-y1-sBv"/>
             </constraints>
-            <point key="canvasLocation" x="129.5" y="104.5"/>
+            <point key="canvasLocation" x="214.5" y="131.5"/>
         </collectionReusableView>
     </objects>
 </document>

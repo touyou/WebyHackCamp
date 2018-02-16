@@ -7,5 +7,6 @@ target 'WebyHackCamp' do
 
   # Pods for WebyHackCamp
   pod 'SwiftOSC', '~> 1.1'
+  pod 'STZPopupView'
 
 end

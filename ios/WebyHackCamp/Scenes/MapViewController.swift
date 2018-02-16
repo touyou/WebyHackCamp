@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-//import SwiftLocation
 import RxSwift
 import RxCocoa
 import CoreLocation
@@ -68,7 +67,6 @@ class MapViewController: UIViewController {
 
             mapView.delegate = self
             mapView.userTrackingMode = .follow
-            mapView.showsUserLocation = true
         }
     }
     @IBOutlet private weak var menuButton: UIButton!
@@ -92,6 +90,11 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        if annotation is MKUserLocation {
+
+            return nil
+        }
 
         let annotationView = MKAnnotationView()
         if let annotation = annotation as? ImagePointAnnotation {

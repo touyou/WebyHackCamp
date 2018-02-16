@@ -25,7 +25,14 @@ class MenuCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
             typedButton.imageView?.contentMode = .scaleAspectFit
         }
     }
+    @IBOutlet weak var selectedLabel: UILabel! {
 
+        didSet {
+
+            selectedLabel.isHidden = true
+        }
+    }
+    
     var type: Item.ItemType! {
 
         didSet {

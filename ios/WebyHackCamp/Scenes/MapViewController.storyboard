@@ -28,12 +28,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BRr-j6-xp0" firstAttribute="bottom" secondItem="EsA-ZQ-CdX" secondAttribute="bottom" id="8gF-J0-hFg"/>
-                            <constraint firstItem="BRr-j6-xp0" firstAttribute="top" secondItem="EsA-ZQ-CdX" secondAttribute="top" id="KUl-vV-csF"/>
-                            <constraint firstItem="BRr-j6-xp0" firstAttribute="leading" secondItem="EsA-ZQ-CdX" secondAttribute="leading" id="acl-OX-9zx"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="bottom" secondItem="xqs-Sg-t2Y" secondAttribute="bottom" id="8gF-J0-hFg"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="top" secondItem="xqs-Sg-t2Y" secondAttribute="top" id="KUl-vV-csF"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="leading" secondItem="xqs-Sg-t2Y" secondAttribute="leading" id="acl-OX-9zx"/>
                             <constraint firstItem="AkH-wd-Csa" firstAttribute="top" secondItem="EsA-ZQ-CdX" secondAttribute="top" constant="20" id="ixm-JV-Hlw"/>
                             <constraint firstItem="EsA-ZQ-CdX" firstAttribute="trailing" secondItem="AkH-wd-Csa" secondAttribute="trailing" constant="20" id="opl-ju-myq"/>
-                            <constraint firstItem="BRr-j6-xp0" firstAttribute="trailing" secondItem="EsA-ZQ-CdX" secondAttribute="trailing" id="shc-1k-HTS"/>
+                            <constraint firstItem="BRr-j6-xp0" firstAttribute="trailing" secondItem="xqs-Sg-t2Y" secondAttribute="trailing" id="shc-1k-HTS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EsA-ZQ-CdX"/>
                     </view>

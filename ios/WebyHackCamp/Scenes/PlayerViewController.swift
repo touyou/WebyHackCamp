@@ -88,7 +88,7 @@ class PlayerViewController: UIViewController {
         }
     }
 
-    private var client = OSCClient(address: "192.168.100.37", port: 10000)
+    private var client = OSCClient(address: "169.254.242.201", port: 10000)
     private var disposeBag = DisposeBag()
     private let cache = UserDefaults.standard
     private var items: [Item] = [] {

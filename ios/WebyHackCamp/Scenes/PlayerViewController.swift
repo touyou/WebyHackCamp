@@ -38,8 +38,8 @@ class PlayerViewController: UIViewController {
 
         didSet {
 
-            visualPad.cornerRadius = visualPad.bounds.width / 2
-            visualPad.clipsToBounds = true
+//            visualPad.cornerRadius = visualPad.bounds.width / 2
+//            visualPad.clipsToBounds = true
             visualPad.isUserInteractionEnabled = true
 
             let leftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.leftSwipeVisualPad(_:)))
@@ -57,8 +57,8 @@ class PlayerViewController: UIViewController {
 
         didSet {
 
-            audioPad.cornerRadius = audioPad.bounds.width / 2
-            audioPad.clipsToBounds = true
+//            audioPad.cornerRadius = audioPad.bounds.width / 2
+//            audioPad.clipsToBounds = true
             audioPad.isUserInteractionEnabled = true
         }
     }

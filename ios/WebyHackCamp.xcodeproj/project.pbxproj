@@ -32,6 +32,10 @@
 		468F52FC203568A700BC0773 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F52FB203568A700BC0773 /* MenuViewController.swift */; };
 		468F52FE203568B500BC0773 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468F52FD203568B500BC0773 /* MenuViewController.storyboard */; };
 		468F53022035F42A00BC0773 /* ImagePointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F53012035F42A00BC0773 /* ImagePointAnnotation.swift */; };
+		468F5309203655B800BC0773 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F5307203655B800BC0773 /* MenuCollectionViewCell.swift */; };
+		468F530A203655B800BC0773 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468F5308203655B800BC0773 /* MenuCollectionViewCell.xib */; };
+		468F530D203661B800BC0773 /* MenuCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F530B203661B800BC0773 /* MenuCollectionReusableView.swift */; };
+		468F530E203661B800BC0773 /* MenuCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468F530C203661B800BC0773 /* MenuCollectionReusableView.xib */; };
 		7963277BF013C0DE0B3FD2E5 /* Pods_WebyHackCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,11 @@
 		468F52FD203568B500BC0773 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
 		468F53012035F42A00BC0773 /* ImagePointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePointAnnotation.swift; sourceTree = "<group>"; };
 		468F53042035FC3700BC0773 /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468F53052036033700BC0773 /* SwiftLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftLocation.framework; path = Carthage/Build/iOS/SwiftLocation.framework; sourceTree = "<group>"; };
+		468F5307203655B800BC0773 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		468F5308203655B800BC0773 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		468F530B203661B800BC0773 /* MenuCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionReusableView.swift; sourceTree = "<group>"; };
+		468F530C203661B800BC0773 /* MenuCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionReusableView.xib; sourceTree = "<group>"; };
 		AAC774BD4FAC7518599AA356 /* Pods-WebyHackCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE00829D8B8B079914201F26 /* Pods_WebyHackCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebyHackCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1330EBFF25E8A0AA60052 /* Pods-WebyHackCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebyHackCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebyHackCamp/Pods-WebyHackCamp.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +168,10 @@
 				468F52F32035645900BC0773 /* MapViewController.storyboard */,
 				468F52FB203568A700BC0773 /* MenuViewController.swift */,
 				468F52FD203568B500BC0773 /* MenuViewController.storyboard */,
+				468F5307203655B800BC0773 /* MenuCollectionViewCell.swift */,
+				468F5308203655B800BC0773 /* MenuCollectionViewCell.xib */,
+				468F530B203661B800BC0773 /* MenuCollectionReusableView.swift */,
+				468F530C203661B800BC0773 /* MenuCollectionReusableView.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 		D409F24E26D7D82C58DF4284 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				468F53052036033700BC0773 /* SwiftLocation.framework */,
 				468F53042035FC3700BC0773 /* SwiftOSC.framework */,
 				468F52F62035657900BC0773 /* RxCocoa.framework */,
 				468F52F52035657900BC0773 /* RxSwift.framework */,
@@ -255,11 +269,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468F530A203655B800BC0773 /* MenuCollectionViewCell.xib in Resources */,
 				468F52F42035645900BC0773 /* MapViewController.storyboard in Resources */,
 				468F52EC2035509000BC0773 /* FuturaDisOutP.ttf in Resources */,
 				468F52FE203568B500BC0773 /* MenuViewController.storyboard in Resources */,
 				468F52CA2035410F00BC0773 /* LaunchScreen.storyboard in Resources */,
 				468F52C72035410F00BC0773 /* Assets.xcassets in Resources */,
+				468F530E203661B800BC0773 /* MenuCollectionReusableView.xib in Resources */,
 				468F52C52035410F00BC0773 /* PlayerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +291,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftLocation.framework",
 			);
 			outputPaths = (
 			);
@@ -352,12 +367,14 @@
 				468F52FC203568A700BC0773 /* MenuViewController.swift in Sources */,
 				468F52EF203561EF00BC0773 /* Items.swift in Sources */,
 				468F52E620354E8700BC0773 /* UICollectionView+Extensions.swift in Sources */,
+				468F5309203655B800BC0773 /* MenuCollectionViewCell.swift in Sources */,
 				468F52E120354E8700BC0773 /* UIApplication+Extensions.swift in Sources */,
 				468F52D820354E7E00BC0773 /* StoryboardInstantiable.swift in Sources */,
 				468F52E320354E8700BC0773 /* URL+Extensions.swift in Sources */,
 				468F52C22035410F00BC0773 /* PlayerViewController.swift in Sources */,
 				468F52C02035410F00BC0773 /* AppDelegate.swift in Sources */,
 				468F52F22035644D00BC0773 /* MapViewController.swift in Sources */,
+				468F530D203661B800BC0773 /* MenuCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

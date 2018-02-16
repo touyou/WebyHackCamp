@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCollectionViewCell" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="WebyHackCamp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="336"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="336"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDv-sH-GGb">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="336"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="Hvm-68-6KB">
+                                <rect key="frame" x="8" y="8" width="52" height="41"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="流れる音" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29V-Bz-sxw">
+                                <rect key="frame" x="68" y="19.5" width="260" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取得日 2018/02/16" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfX-FI-aqE">
+                                <rect key="frame" x="240.5" y="316" width="87.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-nu-Az9">
+                                <rect key="frame" x="8" y="57" width="320" height="251"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="29V-Bz-sxw" firstAttribute="leading" secondItem="Hvm-68-6KB" secondAttribute="trailing" constant="8" id="0CG-dO-4Ms"/>
+                            <constraint firstItem="Hvm-68-6KB" firstAttribute="width" secondItem="29V-Bz-sxw" secondAttribute="width" multiplier="0.2" id="3ey-tU-edm"/>
+                            <constraint firstItem="VfX-FI-aqE" firstAttribute="top" secondItem="YIN-nu-Az9" secondAttribute="bottom" constant="8" id="4bO-IX-gRW"/>
+                            <constraint firstAttribute="bottom" secondItem="VfX-FI-aqE" secondAttribute="bottom" constant="8" id="7aA-oE-Ozk"/>
+                            <constraint firstItem="YIN-nu-Az9" firstAttribute="leading" secondItem="TDv-sH-GGb" secondAttribute="leading" constant="8" id="Fvu-e4-79G"/>
+                            <constraint firstItem="YIN-nu-Az9" firstAttribute="top" secondItem="Hvm-68-6KB" secondAttribute="bottom" constant="8" id="NSy-ru-T2O"/>
+                            <constraint firstItem="Hvm-68-6KB" firstAttribute="top" secondItem="TDv-sH-GGb" secondAttribute="top" constant="8" id="O0k-aH-ggz"/>
+                            <constraint firstAttribute="trailing" secondItem="VfX-FI-aqE" secondAttribute="trailing" constant="8" id="Zhi-Oe-iab"/>
+                            <constraint firstAttribute="trailing" secondItem="YIN-nu-Az9" secondAttribute="trailing" constant="8" id="Zll-kB-8h0"/>
+                            <constraint firstItem="Hvm-68-6KB" firstAttribute="leading" secondItem="TDv-sH-GGb" secondAttribute="leading" constant="8" id="omA-20-bSM"/>
+                            <constraint firstItem="29V-Bz-sxw" firstAttribute="centerY" secondItem="Hvm-68-6KB" secondAttribute="centerY" id="wRG-Uq-rGm"/>
+                            <constraint firstAttribute="trailing" secondItem="29V-Bz-sxw" secondAttribute="trailing" constant="8" id="z6I-6f-KqO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TDv-sH-GGb" secondAttribute="bottom" id="6pM-nl-Fyq"/>
+                <constraint firstAttribute="trailing" secondItem="TDv-sH-GGb" secondAttribute="trailing" id="BqF-5t-mBh"/>
+                <constraint firstItem="TDv-sH-GGb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nv6-sO-STK"/>
+                <constraint firstItem="TDv-sH-GGb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tkN-zy-9sJ"/>
+            </constraints>
+            <size key="customSize" width="336" height="336"/>
+            <connections>
+                <outlet property="dateLabel" destination="VfX-FI-aqE" id="rVb-My-O2p"/>
+                <outlet property="nameLabel" destination="29V-Bz-sxw" id="jgq-W9-NYq"/>
+                <outlet property="typeImageView" destination="Hvm-68-6KB" id="vOM-9T-qqQ"/>
+                <outlet property="typedButton" destination="YIN-nu-Az9" id="fq8-9O-qMk"/>
+            </connections>
+            <point key="canvasLocation" x="177" y="197"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="music" width="40" height="41"/>
+    </resources>
+</document>
